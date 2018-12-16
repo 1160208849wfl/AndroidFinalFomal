@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4d523d9c-d4ab-4014-90ec-5adb88a66ce7" name="96.44.150.164" url="http://96.44.150.164:8080">
+        <fileTransfer host="96.44.150.164" port="61146" rootFolder="/opt/apache-tomcat-9.0.13/webapps" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="61146" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
