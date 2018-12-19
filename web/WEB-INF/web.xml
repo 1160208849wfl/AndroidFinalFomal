@@ -6,11 +6,11 @@
     <display-name>AndroidFinalFomal</display-name>
     <context-param>
         <param-name>resteasy.resources</param-name>
-        <param-value>top.wufl.api.TestAPI</param-value>
+        <param-value>top.wufl.api.UserAPI, top.wufl.api.MusicAPI, top.wufl.api.VideoAPI, top.wufl.api.TestAPI</param-value>
     </context-param>
     <context-param>
         <param-name>resteasy.providers</param-name>
-        <param-value></param-value>
+        <param-value>top.wufl.interceptor.AuthInterceptor</param-value>
     </context-param>
     <listener>
         <listener-class>org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap
@@ -27,6 +27,7 @@
     <servlet-mapping>
         <servlet-name>Resteasy</servlet-name>
         <url-pattern>/p1/*</url-pattern>
+        <url-pattern>/android_server/*</url-pattern>
     </servlet-mapping>
     <filter>
         <filter-name>SetCharacterEncoding</filter-name>

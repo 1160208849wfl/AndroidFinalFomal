@@ -1,7 +1,6 @@
 package top.wufl.service;
 
 import top.wufl.database.EM;
-import top.wufl.service.Service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
