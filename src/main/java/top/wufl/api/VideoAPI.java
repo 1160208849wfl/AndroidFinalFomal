@@ -31,7 +31,7 @@ public class VideoAPI {
         List<Video> videos = null;
         String description = "";
         try {
-            videos = videoService.findAll();
+            videos = videoService.findByFieldName("userName", user.getUserName());
             description = "查询成功";
         } catch (Exception e) {
             System.out.println("数据库错误");

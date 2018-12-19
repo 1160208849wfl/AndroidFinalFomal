@@ -3,6 +3,7 @@ package top.wufl.api;
 import top.wufl.annotation.Auth;
 import top.wufl.bean.Music;
 import top.wufl.bean.Result;
+import top.wufl.bean.User;
 import top.wufl.service.extend.MusicService;
 
 import javax.ws.rs.Consumes;
@@ -25,11 +26,11 @@ public class MusicAPI {
     @Consumes("application/json; charset=utf-8")
     @Produces("application/json; charset=utf-8")
     @Auth("login")
-    public Result getAllMusic() {
+    public Result getAllMusic(User user) {
         List<Music> videos = null;
         String description = "";
         try {
-            videos = musicService.findAll();
+            videos = musicService.findByFieldName("userName", user.getUserName());
             description = "查询成功";
         } catch (Exception e) {
             System.out.println("数据库错误");
